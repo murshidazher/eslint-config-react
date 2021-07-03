@@ -10,8 +10,7 @@
 
 ## Table of Contents
 
-- [@murshidazher/eslint-config-react [![npm](https://img.shields.io/npm/v/@murshidazher/eslint-config-react.svg?label=&color=0080FF)](https://github.com/murshidazher/eslint-config-react/releases/latest)](#murshidazhereslint-config-react-)
-  - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
   - [Purpose](#purpose)
   - [Installation](#installation)
   - [How to use](#how-to-use)
@@ -30,7 +29,7 @@ This package integrates the Prettier rules with ESLint using our configuration. 
 
 You need ESLint and Prettier installed as development dependencies on your project. You can install them by using either **npm** or **yarn**.
 
-### NPM
+### Option 1: NPM
 
 If you use **npm** as the package manager,
 
@@ -59,7 +58,7 @@ If *npm < v5*, Linux/OSX users can run:
 )
 ```
 
-#### YARN
+### Option 2: YARN
 
 If you use **yarn** as the package manager,
 
@@ -91,7 +90,11 @@ To configure add the following to your `package.json` file,
 "prettier": "@murshidazher/prettier-config"
 ```
 
-Or create a `.eslintrc.js` and `.prettierrc` files and add `extends: "@murshidazher/react"` and `"@murshidazher/prettier-config"` respectively. As an example:
+## Extending
+
+This configuration is not intended to be changed, but if you have a setup where modification is required, it is possible. Prettier does not offer an "extends" mechanism as you might be familiar from tools such as ESLint.
+
+To extend a configuration you will need to create a `.eslintrc.js` and `.prettierrc.js` or `prettier.config.js` files:
 
 ```js
 //.eslintrc
@@ -101,8 +104,12 @@ Or create a `.eslintrc.js` and `.prettierrc` files and add `extends: "@murshidaz
   // more configuration options goes here!
 }
 
-// .prettierrc
-"@murshidazher/prettier-config"
+// .prettierrc.js
+module.exports = {
+    ...require('@murshidazher/prettier-config'),
+    semi: false
+    // more configuration options goes here!
+};
 ```
 
 Finally, you can add this scripts to your `package.json` file,
@@ -111,6 +118,25 @@ Finally, you can add this scripts to your `package.json` file,
 "lint": "eslint ./ --ignore-path .gitignore",
 "lint:fix": "npm run lint -- --fix",
 "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
+```
+
+## Commit Hook
+
+If you need to add a pre-commit hook for linting,
+
+```sh
+npm install -D husky lint-staged
+```
+
+```json
+// package.json
+"lint-staged": {
+  "*.{js,css,html}": [
+    "yarn run lint:fix",
+    "yarn run format",
+    "git add"
+  ]
+},
 ```
 
 ## Contributing
