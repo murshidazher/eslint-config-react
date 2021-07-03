@@ -14,6 +14,7 @@
   - [Purpose](#purpose)
   - [Installation](#installation)
   - [How to use](#how-to-use)
+  - [Contributors](#contributors)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -138,6 +139,10 @@ npm install -D husky lint-staged
   ]
 },
 ```
+
+## Contributors
+
+[![contributors](https://contrib.rocks/image?repo=murshidazher/eslint-config-react)](https://github.com/murshidazher/eslint-config-react/graphs/contributors)
 
 ## Contributing
 
