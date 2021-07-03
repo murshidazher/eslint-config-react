@@ -1,0 +1,79 @@
+{
+  "name": "@murshidazher/eslint-config-react",
+  "version": "1.0.0",
+  "description": "eslint-react configuration for javascript projects based on airbnb and prettier configs",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    ".eslintrc.js",
+    ".npmrc",
+    "package.json",
+    "yarn.lock"
+  ],
+  "author": "Murshid Azher <hello@murshidazher.com>",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "release": "auto shipit --base-branch=master",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
+  },
+  "keywords": [
+    "javascript",
+    "eslint",
+    "eslint-config-react",
+    "prettier-config",
+    "react-eslint-config",
+    "murshidazher"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murshidazher/eslint-config-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/murshidazher/eslint-config-react/issues"
+  },
+  "homepage": "https://github.com/murshidazher/eslint-config-react#readme",
+  "prettier": "@murshidazher/prettier-config",
+  "dependencies": {
+    "@murshidazher/prettier-config": "^1.0.0",
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.2"
+  },
+  "devDependencies": {
+    "auto": "^10.29.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0"
+  },
+  "peerDependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "lint-staged": {
+    "*.{js,css,html}": [
+      "yarn run lint:fix",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
