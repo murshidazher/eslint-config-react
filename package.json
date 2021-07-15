@@ -1,6 +1,6 @@
 {
   "name": "@murshidazher/eslint-config-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "eslint-react configuration for javascript projects based on airbnb and prettier configs",
   "main": "index.js",
   "files": [
