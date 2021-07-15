@@ -1,3 +1,15 @@
+# v1.0.4 (Thu Jul 15 2021)
+
+#### ⚠️ Pushed to `master`
+
+- :sparkles: feat: add more config ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v1.0.3 (Wed Jul 14 2021)
 
 #### ⚠️ Pushed to `master`
