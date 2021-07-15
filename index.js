@@ -1,4 +1,4 @@
-const prettierConfig = require('@murshidazher/prettier-config')
+const prettierConfig = require('@murshidazher/prettier-config');
 
 module.exports = {
   env: {
@@ -24,6 +24,15 @@ module.exports = {
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
   ignorePatterns: ['node_modules/'],
@@ -73,5 +82,18 @@ module.exports = {
     'jsx-a11y/role-has-required-aria-props': 2,
     'jsx-a11y/role-supports-aria-props': 2,
     'react-hooks/rules-of-hooks': 2,
+    'no-shadow': 0,
+    '@typescript-eslint/no-shadow': 0,
+    'no-param-reassign': 0,
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
-}
+};
