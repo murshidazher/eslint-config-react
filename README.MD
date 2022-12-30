@@ -1,6 +1,6 @@
 # [@murshidazher/eslint-config-react](https://github.com/murshidazher/eslint-config-react) [![npm](https://img.shields.io/npm/v/@murshidazher/eslint-config-react.svg?label=&color=0080FF)](https://github.com/murshidazher/eslint-config-react/releases/latest)
 
-![build: github workflow](https://img.shields.io/github/workflow/status/murshidazher/eslint-config-react/Release/master?style=flat-square)
+![build: github workflow](https://img.shields.io/github/actions/workflow/status/murshidazher/eslint-config-react/release.yml?style=flat-square)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
 > An opinionated eslint configuration to make linting a 🌬️. **Accepting PRs**
@@ -11,10 +11,15 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [@murshidazher/eslint-config-react ](#murshidazhereslint-config-react-)
+  - [Table of Contents](#table-of-contents)
   - [Purpose](#purpose)
   - [Installation](#installation)
+    - [Option 1: NPM](#option-1-npm)
+    - [Option 2: YARN](#option-2-yarn)
   - [How to use](#how-to-use)
+  - [Extending](#extending)
+  - [Commit Hook](#commit-hook)
   - [Contributors](#contributors)
   - [Contributing](#contributing)
   - [License](#license)
