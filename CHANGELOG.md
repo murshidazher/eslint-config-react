@@ -1,3 +1,15 @@
+# v1.0.5 (Fri Dec 30 2022)
+
+#### ⚠️ Pushed to `master`
+
+- fix: update build badge ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v1.0.4 (Thu Jul 15 2021)
 
 #### ⚠️ Pushed to `master`
